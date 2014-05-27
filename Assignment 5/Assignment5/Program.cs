@@ -10,9 +10,9 @@ namespace Assignment5
     {
         static void Main(string[] args)
         {
-            DayTimeStudent day = new DayTimeStudent(1, "Francisco", "403-554-1491", "S18", "HP2298");
+            DayTimeStudent day = new DayTimeStudent("Francisco", "403-554-1491", "S18", "HP2298");
             day.DisplayStudent();
-            NightTimeStudent night = new NightTimeStudent(2, "Javier", "403-149-1554", "WB122", "C#");
+            NightTimeStudent night = new NightTimeStudent("Javier", "403-149-1554", "WB122", "C#");
             night.DisplayStudent();
         }
     }

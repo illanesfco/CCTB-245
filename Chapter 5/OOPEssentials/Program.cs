@@ -11,8 +11,18 @@ namespace OOPEssentials
         static void Main(string[] args)
         {
             //DemoInheritance();
-            DemoPolymorphism();
+            //DemoPolymorphism();
+            DemoOperatorOverloading();
             
+        }
+
+        static void DemoOperatorOverloading()
+        {
+            Cylinder barrel = new Cylinder(5, 20);
+            Console.WriteLine("The volume is " + barrel.Volume);
+
+            Cylinder doubleBarrel = barrel + barrel;
+            Console.WriteLine("The volume is " + doubleBarrel.Volume);
         }
 
         static void DemoInheritance()

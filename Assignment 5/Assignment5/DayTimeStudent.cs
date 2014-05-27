@@ -14,11 +14,9 @@ namespace Assignment5
         #endregion
 
         #region Constructors
-        public DayTimeStudent(int id, string name, string phone, string sec, string locker)
+        public DayTimeStudent(string name, string phone, string sec, string locker) : base(name, phone)
+            //inherit base (student) class paramters (name, phone)
         {
-            Id = id;
-            Name = name;
-            PhoneNumber = phone;
             Section = sec;
             Locker = locker;
         }
