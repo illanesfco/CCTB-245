@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CardGame
+namespace CardGame.Game_Elements
 {
     //Extra data types that relate to the Card class
-    enum Suit { HEARTS, DIAMONDS, CLUBS, SPADES }
-    enum CardFace
+    public enum Suit { HEARTS, DIAMONDS, CLUBS, SPADES }
+    public enum CardFace
     {
         Ace = 1,
         Deuce,
@@ -16,12 +16,14 @@ namespace CardGame
         Jack, Queen, King
     }
 
-    class Card
+    // An Immutable type - cannot be changed
+    public class Card
     {
         #region Properties
         public Suit Suit { get; private set; }
         public CardFace Face { get; private set; }
-        public int Value {
+        public int Value
+        {
 
             get
             {
@@ -40,5 +42,10 @@ namespace CardGame
             Face = face;
         }
         #endregion
+
+        public override string ToString()
+        {
+            return string.Format("{0} of {1}", Face, Suit);
+        }
     }
 }
